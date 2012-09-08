@@ -2,6 +2,7 @@
 *~
 InstalledFiles
 ext/plruby_oracle/extproc_ruby/Makefile
+ext/plruby_oracle/extproc_ruby/mkmf.log
 ext/plruby_oracle/extproc_ruby/*.o
 ext/plruby_oracle/extproc_ruby/*.so
 ext/plruby_oracle/extproc_ruby/*.def

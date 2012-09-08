@@ -1,17 +1,13 @@
 require 'mkmf'
+require File.dirname(__FILE__) + '/oraconf'
 
-oracle_home = ENV['ORACLE_HOME']
-if oracle_home.nil? || oracle_home.length == 0
-  raise "The environment variable ORACLE_HOME is not set"
-end
+oraconf = OraConf.get()
 
-is_windows = RUBY_PLATFORM =~ /mswin32|cygwin|mingw32/
+$CFLAGS += oraconf.cflags
+$libs += oraconf.libs
 
-if is_windows
-  $CFLAGS += " -I#{oracle_home}/oci/include"
-  $libs += " #{oracle_home}/oci/lib/msvc/oci.lib"
-else
-  $CFLAGS += " -I#{oracle_home}/rdbms/public"
+if oraconf.cc_is_gcc
+  $CFLAGS += " -Wall"
 end
 
 create_makefile('extproc_ruby')

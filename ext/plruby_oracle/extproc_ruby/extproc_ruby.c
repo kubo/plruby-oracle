@@ -44,21 +44,21 @@ static OCIError *dbg_errhp;
 
 
 PLRUBY_EXPORT void
-Init_extproc_oracle(void)
+Init_extproc_ruby(void)
 {
     rb_raise(rb_eRuntimeError, "Don't require 'extproc_ruby' from ruby.");
 }
 
 PLRUBY_EXPORT OCIAnyData *
-plruby_impl(OCIExtProcContext *with_context, short *ret_ind, int rettype,
-            const char *obj, short obj_ind, const char *meth, short meth_ind, int narg, short narg_ind,
-            OCIAnyData *a1, short a1_ind, OCIAnyData *a2, short a2_ind, OCIAnyData *a3, short a3_ind,
-            OCIAnyData *a4, short a4_ind, OCIAnyData *a5, short a5_ind, OCIAnyData *a6, short a6_ind,
-            OCIAnyData *a7, short a7_ind, OCIAnyData *a8, short a8_ind, OCIAnyData *a9, short a9_ind,
-            OCIAnyData *a10, short a10_ind, OCIAnyData *a11, short a11_ind, OCIAnyData *a12, short a12_ind,
-            OCIAnyData *a13, short a13_ind, OCIAnyData *a14, short a14_ind, OCIAnyData *a15, short a15_ind,
-            OCIAnyData *a16, short a16_ind, OCIAnyData *a17, short a17_ind, OCIAnyData *a18, short a18_ind,
-            OCIAnyData *a19, short a19_ind, OCIAnyData *a20, short a20_ind)
+extproc_ruby(OCIExtProcContext *with_context, short *ret_ind, int rettype,
+             const char *obj, short obj_ind, const char *meth, short meth_ind, int narg, short narg_ind,
+             OCIAnyData *a1, short a1_ind, OCIAnyData *a2, short a2_ind, OCIAnyData *a3, short a3_ind,
+             OCIAnyData *a4, short a4_ind, OCIAnyData *a5, short a5_ind, OCIAnyData *a6, short a6_ind,
+             OCIAnyData *a7, short a7_ind, OCIAnyData *a8, short a8_ind, OCIAnyData *a9, short a9_ind,
+             OCIAnyData *a10, short a10_ind, OCIAnyData *a11, short a11_ind, OCIAnyData *a12, short a12_ind,
+             OCIAnyData *a13, short a13_ind, OCIAnyData *a14, short a14_ind, OCIAnyData *a15, short a15_ind,
+             OCIAnyData *a16, short a16_ind, OCIAnyData *a17, short a17_ind, OCIAnyData *a18, short a18_ind,
+             OCIAnyData *a19, short a19_ind, OCIAnyData *a20, short a20_ind)
 {
     plruby_context_t ctx;
     OCIAnyData *sdata;
