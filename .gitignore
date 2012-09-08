@@ -1,0 +1,10 @@
+.config
+*~
+InstalledFiles
+ext/plruby_oracle/extproc_ruby/Makefile
+ext/plruby_oracle/extproc_ruby/*.o
+ext/plruby_oracle/extproc_ruby/*.so
+ext/plruby_oracle/extproc_ruby/*.def
+ext/plruby_oracle/extproc_ruby/*~
+lib/*~
+lib/plruby_oracle/*~
